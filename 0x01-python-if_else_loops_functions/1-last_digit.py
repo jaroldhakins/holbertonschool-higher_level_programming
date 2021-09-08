@@ -2,17 +2,17 @@
 import random
 number = random.randint(-10000, 10000)
 num1 = 0
-d = 0
-str = "and is less than 6 and not 0"
+ld = 0
 if number < 0:
     num1 = number * -1
-    d = num1 % 10
-    d = d * -1
+    ld = num1 % 10
+    ld = ld * -1
 else:
-    d = number % 10
-if d == 0:
-    print("last digit of {:d} is {:d} and is 0".format(number, d))
-elif d > 5:
-    print("last digit of {:d} is {:d} and is greater than 5".format(number, d))
-elif d < 6 and d != 0:
-    print("last digit of {:d} is {:d} {:s}".format(number, d, str))
+    ld = number % 10
+print("Last digit of {:d} is ".format(number), end="")
+if ld == 0:
+    print("{:d} and is 0".format(ld))
+elif ld > 5:
+    print("{:d} and is greater than 5".format(ld))
+elif ld < 6 and ld != 0:
+    print("{:d} and is less than 6 and not 0".format(ld))
