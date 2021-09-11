@@ -8,7 +8,7 @@ int check_cycle(listint_t *list)
 {
 	listint_t *i;
 
-	for (i = list; list != NULL;)
+	for (i = list; list != NULL; list = list->next)
 	{
 		while (i != NULL)
 		{
@@ -18,7 +18,6 @@ int check_cycle(listint_t *list)
 				return (1);
 			}
 		}
-		list = list->next;
 	}
 	return (0);
 }
