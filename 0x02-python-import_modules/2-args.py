@@ -14,6 +14,7 @@ def arguments(argv):
             print("{:d}: {:s}".format(i, argv[i]))
             i += 1
 
+
 if __name__ == "__main__":
     import sys
     arguments(sys.argv)
