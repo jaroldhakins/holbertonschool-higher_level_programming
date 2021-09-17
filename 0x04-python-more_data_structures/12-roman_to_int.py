@@ -9,12 +9,12 @@ def roman_to_int(roman_string):
         'D': 500,
         'M': 1000
     }
-    if roman_string == None or roman_string != str:
-        return None
     num = 0
     for i in range(len(roman_string)):
         if i > 0 and Dict[roman_string[i]] > Dict[roman_string[i - 1]]:
             num += Dict[roman_string[i]] - 2 * Dict[roman_string[i - 1]]
         else:
             num += Dict[roman_string[i]]
+    if roman_string == None or roman_string == '':
+        return None
     return num
