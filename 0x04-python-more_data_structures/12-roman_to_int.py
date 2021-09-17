@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
+    if roman_string == None or type(roman_string) is not str:
+        return None
     Dict = {
         'I': 1,
         'V': 5,
@@ -15,6 +17,4 @@ def roman_to_int(roman_string):
             num += Dict[roman_string[i]] - 2 * Dict[roman_string[i - 1]]
         else:
             num += Dict[roman_string[i]]
-    if roman_string == None or roman_string == '':
-        return None
     return num
