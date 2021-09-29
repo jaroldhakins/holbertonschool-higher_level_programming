@@ -6,6 +6,7 @@ class Square:
     pass
 
     def __init__(self, size=0):
+        '''init with class square'''
         if type(size) != int:
             raise TypeError("size must be an integer")
         if size < 0:
