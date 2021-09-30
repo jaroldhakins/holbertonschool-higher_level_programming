@@ -59,7 +59,7 @@ class Rectangle:
         if self.__height < 0:
             raise ValueError("height must be >= 0")
         self.__height = height
-    
+
     def area(self):
         '''return the Rectangle area
         '''
@@ -70,14 +70,14 @@ class Rectangle:
         '''
         if self.__width == 0 or self.__height == 0:
             return 0
-        return (2* (self.__height * self.__width))
+        return (2 * (self.__height * self.__width))
 
     def __str__(self):
         '''method: __str__
         return nice string rectangle
         '''
         string = ""
-        x = self.__height -1
+        x = self.__height - 1
         if self.__height == 0 or self.__width == 0:
             return ""
         for i in range(self.__height):
