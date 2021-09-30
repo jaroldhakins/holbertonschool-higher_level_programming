@@ -6,8 +6,8 @@ class Rectangle:
     '''initialize class'''
 
     def __init__(self, width=0, height=0):
-        self.width = width
-        self.height = height
+        self.__width = width
+        self.__height = height
 
     @property
     def width(self):
@@ -42,19 +42,19 @@ class Rectangle:
         return (2 * (self.__width + self.__height))
 
     def __str__(self):
-        string = ""
-        if self.__height == 0 or self.__width == 0:
+        if self.__width == 0 or self.__height == 0:
             return ""
+        string = ""
+        x = self.__height
         for i in range(self.__height):
-            string += '#' * self.width
-            if i + 1 < self.__height:
-                string += '\n'
+            for j in range(self.__width):
+                string += "#"
+            if x < i - 1:
+                string += "\n"
         return string
 
     def __repr__(self):
-        string = "Rectangle(" + str(self.__width) + ","
-        string += str(self.__height) + ")"
-        return string
+        return ("Rectangle({}, {})".format(self.__width, self.__height))
 
     def __del__(self):
         print("Bye Rectangle...")
