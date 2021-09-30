@@ -44,9 +44,10 @@ class Rectangle:
     def __str__(self):
         string = ""
         x = self.__height
-        for i in range(self.__height):
-            for j in range(self.__width):
-                string = string + "#"
-            if i != x - 1:
-                string = string + "\n"
+        if self.__width != 0 and self.__height != 0:
+            for i in range(self.__height):
+                for j in range(self.__width):
+                    string = string + "#"
+                if i != x - 1:
+                    string = string + "\n"
         return string
