@@ -4,6 +4,8 @@ add
 integer
 like module
 '''
+
+
 def add_integer(a, b=98):
     """
     Return sum of a and b.
@@ -18,4 +20,4 @@ def add_integer(a, b=98):
     if not isinstance(b, int) or isinstance(b, bool):
         raise TypeError("b must be an integer")
 
-    return ( a + b )
+    return (a + b)
