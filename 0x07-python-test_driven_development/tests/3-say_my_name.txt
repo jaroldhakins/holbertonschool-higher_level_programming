@@ -32,3 +32,7 @@ Now use it:
         Traceback (most recent call last):
         ...
         TypeError: first_name must be a string
+
+    Check passin nothing to first_name:
+        >>> say_my_name("Jarold")
+        My name is Jarold 
