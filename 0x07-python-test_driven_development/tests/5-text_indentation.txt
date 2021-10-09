@@ -1,0 +1,36 @@
+The ``5-text_indentation`` module
+=================================
+
+Using ``text_indentation``
+--------------------------
+
+Importing function:
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Now use it:
+
+    check passing a number
+    >>> text_indentation(5)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+    check passing nothing:
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+    check Normal use:
+    >>> text_indentation("Jarold? is: a holberton. student")
+    Jarold?
+    <BLANKLINE>
+    is:
+    <BLANKLINE>
+    a holberton.
+    <BLANKLINE>
+    student
+
+    >>> text_indentation("                     Jarold Hakins.")
+    Jarold Hakins.
+    <BLANKLINE>
