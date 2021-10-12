@@ -1,5 +1,12 @@
 #!/usr/bin/python3
+'''
+Inherits from int
+'''
+
+
 class MyInt(int):
+    """init class
+    """
     def __init__(self, value):
         self.num = value
 
