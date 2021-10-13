@@ -4,9 +4,17 @@
 Using ``MyList``
 -----------------
 
+Importing the class from the module:
+    >>> MyList = __import__("1-my_list").MyList
+
 Importing and checking class:
     >>> m = __import__('1-my_list').MyList.__doc__
     >>> len(m) > 0
+    True
+
+Importing file:
+    >>> m1 = __import__('1-my_list').__doc__
+    >>> len(m1) > 0
     True
 
 checking function:
@@ -16,24 +24,17 @@ checking function:
 
 checking normal case:
     >>> my_list = MyList()
-
     >>> print(my_list)
     []
-
     >>> my_list.append(1)
-
     >>> my_list.append(4)
-
     >>> my_list.append(2)
-
     >>> my_list.append(3)
-
     >>> my_list.append(5)
-
     >>> print(my_list)
     [1, 4, 2, 3, 5]
 
-    >>>my_list.print_sorted()
+    >>> my_list.print_sorted()
     [1, 2, 3, 4, 5]
 
 checking negative numbers:
@@ -52,6 +53,4 @@ checking with strings and int combined:
     >>> my_list3.append("Jarold")
 
     >>> print(my_list3)
-    Traceback (most recent call last):
-    ...
-    TypeError: '<' not supported between instances of 'str' and 'int'
+    [1, 'Jarold']
