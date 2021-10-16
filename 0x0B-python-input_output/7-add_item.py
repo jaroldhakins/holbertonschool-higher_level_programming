@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-
+"""
+This is a script that adds
+all arguments to a python file
+"""
 import sys
 import json
 
