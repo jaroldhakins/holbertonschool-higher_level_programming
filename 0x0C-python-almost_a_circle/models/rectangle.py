@@ -6,6 +6,10 @@ from models.base import Base
 
 
 class Rectangle(Base):
+    Rec_dict = {'id': 'id', 'width': '_Rectangle__width',
+                'height': '_Rectangle__height',
+                'x': '_Rectangle__x', 'y': '_Rectangle__y'}
+
     """initializing class"""
     def __init__(self, width, height, x=0, y=0, id=None):
         self.width = width
@@ -84,8 +88,14 @@ class Rectangle(Base):
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x,
                 self.__y, self.__width, self.__height))
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         key_list = ['id', '_Rectangle__width',  '_Rectangle__height',
                     '_Rectangle__x', '_Rectangle__y']
+        Rec_dict = {'id': 'id', 'width': '_Rectangle__width',
+                    'height': '_Rectangle__height',
+                    'x': '_Rectangle__x', 'y': '_Rectangle__y'}
         for i, v in enumerate(args):
             self.__dict__[key_list[i]] = v
+        if len(args) == 0:
+            for key, val in kwargs.items():
+                self.__dict__[Rec_dict[key]] = val
