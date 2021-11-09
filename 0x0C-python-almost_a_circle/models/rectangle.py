@@ -1,14 +1,16 @@
 #!/usr/bin/python3
-''' First rectangle
-'''
-
+"""
+Class Rectangle that
+inherits from Base
+"""
 from models.base import Base
 
 
-
 class Rectangle(Base):
-    '''class Rectangle inherits from base
-    '''
+    """
+    Class Rectangle that inherits from Base
+    Attributes.
+    """
     KV_dict = {'id': 'id', 'width': '_Rectangle__width',
                'height': '_Rectangle__height',
                'x': '_Rectangle__x', 'y': '_Rectangle__y'}
