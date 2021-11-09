@@ -83,3 +83,9 @@ class Rectangle(Base):
     def __str__(self):
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x,
                 self.__y, self.__width, self.__height))
+
+    def update(self, *args):
+        key_list = ['id', '_Rectangle__width',  '_Rectangle__height',
+                    '_Rectangle__x', '_Rectangle__y']
+        for i, v in enumerate(args):
+            self.__dict__[key_list[i]] = v
