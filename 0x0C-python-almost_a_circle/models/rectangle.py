@@ -6,11 +6,11 @@ from models.base import Base
 
 
 class Rectangle(Base):
+    """initializing class"""
     Rec_dict = {'id': 'id', 'width': '_Rectangle__width',
                 'height': '_Rectangle__height',
                 'x': '_Rectangle__x', 'y': '_Rectangle__y'}
 
-    """initializing class"""
     def __init__(self, width, height, x=0, y=0, id=None):
         self.width = width
         self.height = height
