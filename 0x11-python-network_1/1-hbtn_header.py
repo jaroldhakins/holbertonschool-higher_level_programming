@@ -3,7 +3,5 @@
 import sys
 import urllib.request
 
-
 with urllib.request.urlopen(sys.argv[1]) as reqs:
-    inf = reqs.info()
-    print(inf['X-Request-Id'])
+    print(reqs.info()['X-Request-Id'])
